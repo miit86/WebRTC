@@ -189,6 +189,7 @@ TP-Link | Tapo C100/C200/C310 | `rtsp://user:pass@192.168.1.123:554/stream1` and
 Unifi | G4 Dome, G3 Bullet, G3 Flex |
 Wyze | Cam v2, Cam Pan v2 | support sound
 Xiaomi | Dafang | [with hack](https://github.com/EliasKotlyar/Xiaomi-Dafang-Hacks), `rtsp://192.168.1.123:8554/unicast` <br> Video: H264, size: 1920x1080, bitrate: 1000, format: VBR, frame rate: 10 <br> Audio: PCMU, rate in: 8000, rate out: 44100
+XMEye | All IPCam & NVR| Main Stream `rtsp://192.168.30.*/user=user_password=password_channel=1_stream=0.sdp` <br>  Second Stream `rtsp://192.168.30.*/user=user_password=password_channel=1_stream=1.sdp` <br>IPCAM: change user & pass  <br> NVR: change the channel for other channels
 Yi | Hi3518e Chipset | [with hack](https://github.com/alienatedsec/yi-hack-v5)
 Yi | MStar Infinity Chipset | [with hack](https://github.com/roleoroleo/yi-hack-MStar)
 
@@ -205,7 +206,7 @@ Don't do anything. The component will automatically use MSE technology instead o
 If you have [public IP-address](https://help.keenetic.com/hc/en-us/articles/213965789), you can:
 
 - go to "Configuration > Integrations > WebRTC Camera > Options" and select the list of ports as you like (e.g. 50000-51000)
-- you also need forward this **UDP port range** on your router
+- you also need forward this **UDP port range** on your router (make sure outbound NAT is static from HA ip-addres to WAN)
 - it is recommended to use at least 10 ports per camera
 
 **3. Hard tech way**
